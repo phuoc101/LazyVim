@@ -38,6 +38,9 @@ return {
       ensure_installed = {
         "bash",
         "c",
+        "cpp",
+        "latex",
+        "vimdoc",
         "html",
         "javascript",
         "json",
