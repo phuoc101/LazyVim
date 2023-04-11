@@ -23,9 +23,11 @@ return {
         function()
           return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<tab>"
         end,
-        expr = true, silent = true, mode = "i",
+        expr = true,
+        silent = true,
+        mode = "i",
       },
-      { "<tab>", function() require("luasnip").jump(1) end, mode = "s" },
+      { "<tab>",   function() require("luasnip").jump(1) end,  mode = "s" },
       { "<s-tab>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
     },
   },
@@ -86,6 +88,13 @@ return {
           },
         },
       }
+    end,
+  },
+  {
+    "echasnovski/mini.pairs",
+    event = "VeryLazy",
+    config = function(_, opts)
+      require("mini.pairs").setup(opts)
     end,
   },
 }
