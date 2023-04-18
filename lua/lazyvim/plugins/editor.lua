@@ -53,21 +53,21 @@ return {
         end, { desc = dir:sub(1, 1):upper() .. dir:sub(2) .. " Reference", buffer = buffer })
       end
 
-      map("]]", "next")
-      map("[[", "prev")
+      map("<a-n>", "next")
+      map("<a-p>", "prev")
 
-      -- also set it after loading ftplugins, since a lot overwrite [[ and ]]
+      -- also set it after loading ftplugins
       vim.api.nvim_create_autocmd("FileType", {
         callback = function()
           local buffer = vim.api.nvim_get_current_buf()
-          map("]]", "next", buffer)
-          map("[[", "prev", buffer)
+          map("<a-n>", "next", buffer)
+          map("<a-p>", "prev", buffer)
         end,
       })
     end,
     keys = {
-      { "]]", desc = "Next Reference" },
-      { "[[", desc = "Prev Reference" },
+      { "<a-n>", desc = "Next Reference" },
+      { "<a-p>", desc = "Prev Reference" },
     },
   },
 }
