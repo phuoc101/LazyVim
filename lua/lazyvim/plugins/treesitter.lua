@@ -39,7 +39,6 @@ return {
         "bash",
         "c",
         "cpp",
-        "latex",
         "vimdoc",
         "html",
         "javascript",
