@@ -1,6 +1,9 @@
 ---@type LazyVimConfig
 local M = {}
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 M.lazy_version = ">=9.1.0"
 
 ---@class LazyVimConfig
